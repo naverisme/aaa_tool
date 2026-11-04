@@ -1,0 +1,10 @@
+# Design and document generation
+
+1. Restate the objective, scope, confirmed constraints and acceptance criteria. Tie each major recommendation to a requirement, verified issue or accepted decision.
+2. Map the current entry points and ownership first. Build the target around existing boundaries when they can satisfy the goal. Compare plausible options only where a consequential choice exists. For each such decision record a stable ID, status, rationale, trade-off, and trigger for revisiting it.
+3. For each in-scope component specify its name, purpose, owner or code location, public inputs and outputs, allowed dependencies, owned state and failure behavior. Mark proposed paths. For a UI request also specify sibling controls, parent feature, component type, command or navigation, and view-local data. For a library or device component describe its caller contract, runtime constraints, and error handling.
+4. Trace one normal and one material failure path for each affected boundary. Include the triggering input, components in order, state changes, return or error, and where the behavior is checked. Specify data ownership, authorization, concurrency, retries or deployment only when the scope requires them. Attach measurable criteria and the verification method for relevant non-functional requirements.
+5. Give a build order with dependencies, migration and rollback where needed, and an observable completion condition for each step. Map critical architecture rules to concrete inspection or test criteria so `check` can evaluate them later.
+6. Preview the document using the template or the accepted project layout. Remove placeholders and omit irrelevant subsections with a brief reason. Keep the current implementation and approved or proposed target visibly separate. Label coverage limits and unresolved questions. If a blocking answer is missing, show the independently supported portion and defer the dependent decisions.
+
+Give audit findings enough detail to act on them. State impact, evidence, scope and a possible next step, and distinguish a verified rule violation from a general design concern.
